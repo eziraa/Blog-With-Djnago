@@ -21,23 +21,16 @@
     </header>
     <main>
 
-        {% for post in posts%}
         <article class="content">
-            <a href="post/{{post.id}}"><h2 class="post-title"> {{post.title}}</h2></a>
+            <h2 class="post-title"> {{post.title}}</h2>
             <p class="post-body">
-                {{ post.body|truncatechars:200 }}
-                {% if post.body|length > 200 %}
-                    <span class="hidden-content">
-                        {{ post.body|slice:"200:" }}
-                    </span>
-                    <button class="see-more-btn" onclick="toggleContent(this)">See More</button>
-                {% endif %}
+                    
+                {{post.body}}
                 <p class="post-created-date"> Posted on <time datetime="2024-02-10"> {{post.created_at}}</time> by Ezira</p>
 
             </p>
 
         </article>
-        {% endfor %}
         
     </main>
     <footer>
