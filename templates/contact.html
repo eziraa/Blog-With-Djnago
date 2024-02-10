@@ -80,7 +80,7 @@ button[type="submit"]:hover {
         <section class="contact-section">
             <h2>Get in Touch</h2>
             <p>If you have any questions, feedback, or suggestions, or if you're interested in collaborating with us, please don't hesitate to reach out to us using the form below. We value your input and look forward to connecting with you.</p>
-            <form action="" method="post">
+            <form action="save" method="post">
                 {% csrf_token %}
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>

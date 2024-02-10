@@ -126,7 +126,7 @@
                                 }
                                                                                                                                 
                                 .container {
-                                    max-width: 90vw;
+                                    max-width: 70vw;
                                     margin: 5px auto;
                                     padding: 4vw 20px;
                                     display: flex;
@@ -136,24 +136,23 @@
                                                                                                                                 
                                 .about-section {
                                     margin-bottom: 30px;
-                                    font-family: Caveat;
+                                    font-family: Courgette;
                                     font-weight: 500;
                                     font-size: 2rem;
                                     padding: 10px;
                                 }
                                                                                                                                 
                                 .about-section h2 {
-                                    color: #333;
+                                    color: #a41bb1;
                                 }
                                                                                                                                 
                                 .about-section p {
-                                    color: #666;
+                                    color: #510653;
                                 }
 footer {
     background-color: #554d4d;
     color: #686060;
     text-align: center;
-    padding: 10px 0;
     position: fixed;
         bottom: 0;
         width: 100%;
