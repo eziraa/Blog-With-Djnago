@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me - My Personal Blog</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
     <style>
 
 
@@ -13,6 +16,16 @@
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
+    font-family: play;
+    font-weight: 500;
+    box-shadow: 0 10px 20px;
+    background: linear-gradient(to top left,#b24697, #2e0426);
+     clip-path: circle(50% at 50% 50%) polygon(
+            50% 0%,
+            100% 50%,
+            50% 100%,
+            0% 50%
+        );
 }
 
 .contact-section {
@@ -20,11 +33,12 @@
 }
 
 h2 {
-    color: #333;
+    color: #fafafa;
 }
 
 p {
-    color: #666;
+    color: #f4eef2;
+    font-family: ;
 }
 
 form {
@@ -34,13 +48,13 @@ form {
 label {
     display: block;
     margin-bottom: 5px;
-    color: #333;
+    color: #f4eef2;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
+    width:calc(100% - 40px);
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -48,7 +62,7 @@ textarea {
 }
 
 button[type="submit"] {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 10px 20px;
     border: none;
