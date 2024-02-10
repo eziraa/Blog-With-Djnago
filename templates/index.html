@@ -5,64 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog</title>
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-header h1 {
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-main {
-    padding: 20px;
-}
-
-article {
-    margin-bottom: 30px;
-}
-
-article h2 {
-    margin-top: 0;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-    </style>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script src="{% static 'script.js' %}"></script>
 </head>
 <body>
     <header>
@@ -76,16 +20,24 @@ footer {
         </nav>
     </header>
     <main>
-        <article>
-            <h2>Post Title</h2>
-            <p>Post content goes here...</p>
-            <p>Posted on <time datetime="2024-02-10">February 10, 2024</time> by Author</p>
+
+        {% for post in posts%}
+        <article class="content">
+            <h2 class="post-title"> {{post.title}}</h2>
+            <p class="post-body">
+                {{ post.body|truncatechars:100 }}
+                {% if post.body|length > 100 %}
+                    <span class="hidden-content">
+                        {{ post.body|slice:"100:" }}
+                    </span>
+                    <button class="see-more-btn" onclick="toggleContent(this)">See More</button>
+                {% endif %}
+            </p>
+
+            <p class="post-created-date"> Posted on <time datetime="2024-02-10"> {{post.created_at}}</time> by Ezira</p>
         </article>
-        <article>
-            <h2>Another Post Title</h2>
-            <p>More post content goes here...</p>
-            <p>Posted on <time datetime="2024-02-09">February 9, 2024</time> by Author</p>
-        </article>
+        {% endfor %}
+        
     </main>
     <footer>
         <p>&copy; 2024 My Blog</p>
