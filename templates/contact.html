@@ -7,18 +7,7 @@
     <title>Contact Me - My Personal Blog</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
     <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
 
 .container {
     max-width: 800px;
@@ -76,13 +65,23 @@ button[type="submit"]:hover {
 </head>
 <body>
     <header>
-        <h1>Contact Us</h1>
+        <h1>Ezira's Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
     </header>
+    
     <div class="container">
+        
         <section class="contact-section">
             <h2>Get in Touch</h2>
             <p>If you have any questions, feedback, or suggestions, or if you're interested in collaborating with us, please don't hesitate to reach out to us using the form below. We value your input and look forward to connecting with you.</p>
-            <form action="#" method="post">
+            <form action="" method="post">
+                {% csrf_token %}
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
