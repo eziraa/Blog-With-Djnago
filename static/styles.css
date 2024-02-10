@@ -30,19 +30,17 @@
             margin-right: 20px;
         }
 
-        nav ul li:hover {
-            display: inline-block;
-            background-color: #4d4a4a;
-            position: absolute;
-        }
 
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            padding: 10px;
         }
 
         main {
             padding: 20px;
+            display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
         }
 
         article {
