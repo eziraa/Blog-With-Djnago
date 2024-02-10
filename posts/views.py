@@ -1,7 +1,6 @@
 from django.shortcuts import render
 
 from .models import Post
-# Create your views here.
 
 
 def index(request):
@@ -12,3 +11,8 @@ def index(request):
 def post(request, pk):
     post = Post.objects.get(id=pk)
     return render(request, 'post.html', {'post': post})
+
+
+def about(request):
+
+    return render(request, 'about.html')
