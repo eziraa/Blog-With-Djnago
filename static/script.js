@@ -1,12 +1,12 @@
-function toggleContent() {
-  var content = document.querySelector(".content .hidden-content");
-  var btn = document.querySelector(".content .see-more-btn");
+function toggleContent(button) {
+  var content = button.previousElementSibling;
+  var hiddenContent = content.querySelector(".hidden-content");
 
   if (content.style.display === "none" || content.style.display === "") {
     content.style.display = "inline";
-    btn.textContent = "See Less";
+    button.textContent = "See Less";
   } else {
     content.style.display = "none";
-    btn.textContent = "See More";
+    button.textContent = "See More";
   }
 }
