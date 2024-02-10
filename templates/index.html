@@ -23,7 +23,7 @@
 
         {% for post in posts%}
         <article class="content">
-            <a href="post/{{post.id}}"><h2 class="post-title"> {{post.title}}</h2></a>
+            <a style="color: blue;" href="post/{{post.id}}"><h2 class="post-title"> {{post.title}}</h2></a>
             <p class="post-body">
                 {{ post.body|truncatechars:200 }}
                 {% if post.body|length > 200 %}
